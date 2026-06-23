@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Paper editorial — neutral, restrained, recruiter-grade */
+    --background: 40 20% 98%;        /* warm paper */
+    --foreground: 220 15% 10%;       /* ink */
+
+    --card: 40 20% 98%;
+    --card-foreground: 220 15% 10%;
+    --popover: 40 20% 98%;
+    --popover-foreground: 220 15% 10%;
+
+    --primary: 220 15% 10%;
+    --primary-foreground: 40 20% 98%;
+    --secondary: 40 12% 94%;
+    --secondary-foreground: 220 15% 10%;
+    --muted: 40 12% 94%;
+    --muted-foreground: 220 8% 42%;
+    --accent: 14 60% 42%;            /* muted terracotta, used sparingly */
+    --accent-foreground: 40 20% 98%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 40 20% 98%;
+
+    --border: 220 10% 88%;
+    --rule: 220 15% 18%;             /* hard editorial rule */
+    --input: 220 10% 88%;
+    --ring: 220 15% 10%;
+
+    --radius: 0.125rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Geist', 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+  ::selection { background: hsl(var(--foreground)); color: hsl(var(--background)); }
+}
+
+@layer utilities {
+  .font-display { font-family: 'Instrument Serif', 'Newsreader', Georgia, serif; font-weight: 400; }
+  .font-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+  .text-balance { text-wrap: balance; }
+  .rule { border-color: hsl(var(--rule)); }
+  .label {
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-foreground/70;
+  }
+  .num { font-variant-numeric: tabular-nums; }
+}
