@@ -35,6 +35,7 @@ const projects: Project[] = [
     ],
     role: "Designed the schema, wrote the API, did the deploy, fought the memory limits.",
     stack: ["Python", "FastAPI", "LangChain", "FAISS", "FastEmbed", "Groq", "SQLite"],
+    href: "https://ai-support-copilot-hbop.onrender.com",
   },
   {
     n: "02",
@@ -56,6 +57,7 @@ const projects: Project[] = [
     ],
     role: "Solo build — auth, detection rules, dashboard, deploy.",
     stack: ["Python", "Flask", "SQLite", "Google OAuth"],
+    href: "https://scam-detector-104f.onrender.com",
   },
   {
     n: "03",
@@ -77,6 +79,7 @@ const projects: Project[] = [
     ],
     role: "Built solo, start to finish.",
     stack: ["Python", "Flask", "SQLite", "Jinja2"],
+    href: "https://quiz-master-ayp6.onrender.com",
   },
 ];
 
@@ -181,7 +184,19 @@ export const Work = () => {
                   <span key={s}>{s}</span>
                 ))}
               </div>
-              <span className="text-muted-foreground">{p.year}</span>
+              <div className="flex items-center gap-4">
+                {p.href && (
+                  <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:opacity-60 transition-opacity"
+                  >
+                    View live →
+                  </a>
+                )}
+                <span className="text-muted-foreground">{p.year}</span>
+              </div>
             </div>
           </motion.article>
         ))}

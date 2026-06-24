@@ -8,7 +8,7 @@ export const Hero = () => {
         <div className="grid grid-cols-12 gap-6 label text-muted-foreground border-t rule pt-4">
           <span className="col-span-6 md:col-span-3">Pranay Gupta</span>
           <span className="hidden md:block md:col-span-3">Amritsar, IN</span>
-          <span className="hidden md:block md:col-span-3">B.Tech ECE · BS Data Science, IITM</span>
+          <span className="hidden md:block md:col-span-3">B.Tech ECM · BS Data Science, IITM</span>
           <span className="col-span-6 md:col-span-3 text-right md:text-left">
             <span className="inline-flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[hsl(var(--accent))]" />
@@ -35,7 +35,7 @@ export const Hero = () => {
               transition={{ duration: 0.8, delay: 0.12 }}
               className="block italic text-foreground/80"
             >
-              mostly Python &amp; FastAPI.
+              building AI products.
             </motion.span>
           </h1>
         </div>
